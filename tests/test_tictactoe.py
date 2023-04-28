@@ -12,25 +12,25 @@ from pytest import mark
 
 
 class TestClassModel:
-    def test_de_instanciacao_da_classe_e_manipulacao_do_atributo_X(self):
+    def test_de_manipulacao_do_atributo_X(self):
         # given
         x = 1
         receber_x = 1
         # when
         test_tic_tac_toe = TicTacToe()
-        test_tic_tac_toe.placar_x = x
-        resultado = test_tic_tac_toe.placar_x
+        test_tic_tac_toe.pontuacao_x = x
+        resultado = test_tic_tac_toe.pontuacao_x
         # than
         assert resultado == receber_x
 
-    def test_de_instanciacao_da_classe_e_manipulacao_do_atributo_O(self):
+    def test_de_manipulacao_do_atributo_O(self):
         # given
         o = 2
         receber_o = 2
         # when
         test_tic_tac_toe = TicTacToe()
-        test_tic_tac_toe.placar_o = o
-        resultado = test_tic_tac_toe.placar_o
+        test_tic_tac_toe.pontuacao_o = o
+        resultado = test_tic_tac_toe.pontuacao_o
         # than
         assert resultado == receber_o
 
@@ -45,22 +45,44 @@ class TestClassModel:
         # than
         assert resultado == cerquilha
 
-    def test_tentando_instanciar_uma_string_em_placar_x(self):
+    def test_tentando_instanciar_uma_string_em_pontuacao_x(self):
         with pytest.raises(TypeError):
             # given
             x = 'X'
             # when
             test_tic_tac_toe = TicTacToe()
-            resultado = test_tic_tac_toe.placar_x = x
+            resultado = test_tic_tac_toe.pontuacao_x = x
             # than
             assert resultado
 
-    def test_tentando_instanciar_uma_string_em_placar_o(self):
+    def test_tentando_instanciar_uma_string_em_pontuacao_o(self):
         with pytest.raises(TypeError):
             # given
             o = 'O'
             # when
             test_tic_tac_toe = TicTacToe()
-            resultado = test_tic_tac_toe.placar_o = o
+            resultado = test_tic_tac_toe.pontuacao_o = o
             # than
             assert resultado
+
+    def test_testando_manipulacao_de_jogadas_x(self):
+        #given
+        x = 1
+        resposta_x = 1
+        #when
+        test_tic_tac_toe = TicTacToe()
+        test_tic_tac_toe.jogadas_x += x
+        resultado = test_tic_tac_toe.jogadas_x
+        #than
+        assert resultado == resposta_x
+    
+    def test_testando_manipulacao_de_jogadas_o(self):
+        #given
+        o = 1
+        resposta_o = 1
+        #when
+        test_tic_tac_toe = TicTacToe()
+        test_tic_tac_toe.jogadas_o += o
+        resultado = test_tic_tac_toe.jogadas_o
+        #than
+        assert resultado == resposta_o
