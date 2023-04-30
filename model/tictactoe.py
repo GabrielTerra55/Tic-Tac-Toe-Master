@@ -1,10 +1,9 @@
 class TicTacToe:
     def __init__(self):
         self.__cerquilha = [[0 for j in range(3)] for i in range(3)]
-        self.__pontuacao_x = 0
-        self.__pontuacao_o = 0
-        self.__jogadas_x = 0
-        self.__jogadas_o = 0
+        self.__jogada = 0
+        self.__jogador = 1
+        self.__ganhador = None
 
     @property
     def cerquilha(self):
@@ -15,37 +14,25 @@ class TicTacToe:
         self.__cerquilha = cerquilha
 
     @property
-    def pontuacao_x(self):
-        return self.__pontuacao_x
+    def jogada(self):
+        return self.__jogada
 
-    @pontuacao_x.setter
-    def pontuacao_x(self, pontuacao_x):
-        if not isinstance(pontuacao_x, int):
-            raise TypeError("somente numeros inteiros são validos")
-        self.__pontuacao_x = pontuacao_x
+    @jogada.setter
+    def jogada(self, jogada):
+        self.__jogada = jogada
 
     @property
-    def pontuacao_o(self):
-        return self.__pontuacao_o
-
-    @pontuacao_o.setter
-    def pontuacao_o(self, pontuacao_o):
-        if not isinstance(pontuacao_o, int):
-            raise TypeError("somente numeros inteiros são validos")
-        self.__pontuacao_o = pontuacao_o
-
-    @property
-    def jogadas_x(self):
-        return self.__jogadas_x
+    def jogador(self):
+        return self.__jogador
     
-    @jogadas_x.setter
-    def jogadas_x(self, jogadas_x):
-        self.__jogadas_x = jogadas_x
+    @jogador.setter
+    def jogador(self, jogador):
+        self.__jogador = jogador
     
     @property
-    def jogadas_o(self):
-        return self.__jogadas_o 
-    
-    @jogadas_o.setter
-    def jogadas_o(self, jogadas_o):
-        self.__jogadas_o = jogadas_o
+    def ganhador(self):
+        return self.__ganhador
+
+    @ganhador.setter
+    def ganhador(self, ganhador):
+        self.__ganhador = ganhador

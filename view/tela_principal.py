@@ -6,6 +6,7 @@ class TelaPrincipal:
         print("0 - Encerrar")
 
         opcao = input("Escolha uma opção: ")
+        
         while not opcao == '1' or opcao == '0':
             self.opcao_invalida()
             opcao = input("Escolha uma opção: ")
