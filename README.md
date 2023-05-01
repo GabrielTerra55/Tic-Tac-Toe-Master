@@ -5,6 +5,8 @@ Neste repositorio foi feito uma aplicação de um jogo popular chamado de 'jogo 
 <p>
   Para o desenvolvimento desta aplicação foi utilizado a linguagem de programação <b>python</b>.<br>
   Também foi utilizado no desenvolvimento a arquitetura MVC e teste com a biblioteca <b>pytest</b>.<br>
+</p>
+<p>
   O intuito desse projeto é desenvolver bons fundamentos em algoritimos, boa pratica de programação (metodos e atributos e organização dos folders).<br>
   Além disso foi feito um diagrama de classes para demostrar a organização e o relacionamento das classes utilizadas.
 </p>
