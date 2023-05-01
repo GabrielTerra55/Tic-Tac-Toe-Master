@@ -35,7 +35,7 @@ class ControllerPrincipal:
         """
         self.__controller_tictactoe.disputar()
 
-    def inicializa_sistema(self):
+    def inicializa_controller_principal(self):
         """
         Inicia o menu de opções para o usuario
 

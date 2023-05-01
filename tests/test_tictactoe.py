@@ -1,8 +1,8 @@
 import pytest
 from pytest import mark
 
-from model.tictactoe import TicTacToe
-from controller.controller_principal import ControllerPrincipal
+from game.model.tictactoe import TicTacToe
+from game.controller.controller_principal import ControllerPrincipal
 
 
 
