@@ -19,16 +19,20 @@ class TicTacToe:
 
     @jogada.setter
     def jogada(self, jogada):
+        if not isinstance(jogada, int):
+            raise ValueError ("somente numeros inteiros são validos")
         self.__jogada = jogada
 
     @property
     def jogador(self):
         return self.__jogador
-    
+
     @jogador.setter
     def jogador(self, jogador):
+        if not isinstance(jogador, int):
+            raise ValueError('somente numeros inteiros são validos')
         self.__jogador = jogador
-    
+
     @property
     def ganhador(self):
         return self.__ganhador
