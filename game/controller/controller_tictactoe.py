@@ -1,7 +1,7 @@
 import os
 
-from model.tictactoe import TicTacToe
-from view.tela_tic_tac_toe import TelaTicTacToe
+from game.model.tictactoe import TicTacToe
+from game.view.tela_tic_tac_toe import TelaTicTacToe
 
 
 class ControllerTicTacToe:

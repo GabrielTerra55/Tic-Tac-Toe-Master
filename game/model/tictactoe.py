@@ -40,3 +40,6 @@ class TicTacToe:
     @ganhador.setter
     def ganhador(self, ganhador):
         self.__ganhador = ganhador
+
+    def __str__(self):
+        return f'{self.cerquilha} {self.ganhador}'

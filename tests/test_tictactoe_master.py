@@ -7,6 +7,7 @@ from game.controller.controller_principal import ControllerPrincipal
 
 
 class TestClassModelTicTacToe:
+    @mark.tictactoe
     def test_de_manipulação_do_atrbuto_cerquilha_deve_retonar_cerquilha_alterada(self):
         # given
         cerquilha = [[0, 0, 0], [0, 'X', 0], [0, 0, 0]]
@@ -18,6 +19,7 @@ class TestClassModelTicTacToe:
         # than
         assert resultado == receber
 
+    @mark.tictactoe
     def test_manipulacao_de_jogada_deve_retonar_1(self):
         # given
         x = 1
@@ -29,6 +31,7 @@ class TestClassModelTicTacToe:
         # than
         assert resultado == resposta
 
+    @mark.tictactoe
     def test_manipulacao_de_jogador_deve_retonar_2(self):
         # given
         valor = 1
@@ -40,6 +43,7 @@ class TestClassModelTicTacToe:
         # than
         assert resultado == resposta
 
+    @mark.tictactoe
     def test_manipula_ganhador_deve_retornar_X(self):
         # given
         valor = 'X'
@@ -51,6 +55,7 @@ class TestClassModelTicTacToe:
         # than
         assert resultado == resposta
 
+    @mark.tictactoe
     def test_inserindo_valor_indevido_em_jogador_deve_retornar_valuerror(self):
         with pytest.raises(ValueError):
             # given
@@ -61,6 +66,7 @@ class TestClassModelTicTacToe:
             # than
             assert resultado
 
+    @mark.tictactoe
     def test_inserindo_valor_indevido_em_jogada_deve_retornar_valuerror(self):
         with pytest.raises(ValueError):
             # given
@@ -81,7 +87,8 @@ class TestClassModelTicTacToe:
             resultado = test_controller_tic_tac_toe.controller_tictactoe.converter_em_posicao_real(entrada)
             #than
             assert resultado == esperado
-        
+
+        @mark.controller_tictactoe
         def test_inserindo_uma_posição_deve_retonar_a_mesma_posicao(self):
             # given
             entrada = '5'
@@ -92,6 +99,7 @@ class TestClassModelTicTacToe:
             # than
             assert resultado == esperado
 
+        @mark.controller_tictactoe
         def test_verifica_se_a_jogada_e_maior_que_5_deve_retornar_true(self):
             # given
             entrada = 8
@@ -102,7 +110,8 @@ class TestClassModelTicTacToe:
                 entrada)
             # than
             assert resultado == esperado
-        
+
+        @mark.controller_tictactoe
         def test_verifica_retorna_o_jogador_x_(self):
             # given
             entrada = 3

@@ -1,6 +1,6 @@
 import sys
-from controller.controller_tictactoe import ControllerTicTacToe
-from view.tela_principal import TelaPrincipal
+from game.controller.controller_tictactoe import ControllerTicTacToe
+from game.view.tela_principal import TelaPrincipal
 
 
 class ControllerPrincipal:
