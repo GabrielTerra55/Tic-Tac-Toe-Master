@@ -12,23 +12,27 @@ Neste repositorio foi feito uma aplicação de um jogo popular chamado de 'jogo 
 </p>
 <h2>Instalação</h2>
 Você precisa ter a linguagem 'Python' instalada na sua maquina. Também recomenda-se utilizar um ambiente virtual.<br>
-Basicamente você não precisara de nenhuma biblioteca externa para rodar a aplicação, basta utilizar diretamente o comando: <br>
+Basicamente você não precisara de nenhuma biblioteca externa para rodar a aplicação, basta utilizar diretamente o comando: 
+
 ```
 python main.py      
 ```
-Feito isso ja irá funcionar.
+ Feito isso ja irá funcionar.
 
 <h2>Testes</h2>
 Para visualizar os testes, você deve primeiramente baixar as instancias referentes com o comando: <br>
+
 ```
 pip install requirements.txt       
 ```
 Então: <br>
 verificar todos os testes, use o comando:
+
 ```
 pytest -v     
 ```
 Verifica a cobertura dos teste, use o comando:
+
 ```
 pytest --cov    
 ```
